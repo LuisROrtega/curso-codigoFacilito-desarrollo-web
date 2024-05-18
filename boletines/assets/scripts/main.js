@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
         content.classList.replace('animate__backInDown', 'animate__bounceOutUp')
 
         setTimeout(function() {
-            location.href = "/";
+            location.href = "./boltines";
         }, 600);
 
         return false;
