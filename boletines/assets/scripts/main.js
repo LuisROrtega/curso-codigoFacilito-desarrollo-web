@@ -1,31 +1,51 @@
-// íconos para generar las estrellas
+// DOM
+// let celdas = document.querySelectorAll('td');
 
-function excellentGame() {
-    let star = '';
+// celdas.forEach(function(td) {
+//     td.addEventListener('click', function() {
+//         console.log("Hice Click");
+//     })
+// });
 
-    for (let i = 0; i < 5; i++) {
-        star += '<i class="fa-solid fa-star"></i>';
-    }
+// Obtener los elementos de la clase .home
+// let home = document.querySelectorAll('.home');
 
-    return star;
-}
+// Recorrerlos
+// home.forEach(function(link) {
+//     // Agregar un evento click a cada uno de ellos
+//     link.addEventListener('click', function(e) {
+//         e.preventDefault();
+//         console.log("Hice click en el enlace");
 
-function goodGame() {
-    let star = '';
+//         return false;
+//     }); 
+// });
 
-    for (let i = 0; i < 4; i++) {
-        star += '<i class="fa-solid fa-star"></i>';
-    }
 
-    return star;
-}
+// Recorriendo iconos de index y modificandolos
+// let iconos = document.querySelectorAll('i');
 
-function voidStar() {
-    let star = '';
+// iconos.forEach(function(icono) {
+//     icono.classList.replace('fa-star', 'fa-heart');
+// });
 
-    for (let i = 0; i < 1; i++) {
-        star += '<i class="fa-regular fa-star"></i>';
-    }
 
-    return star;
-}
+// Cambiando animación del contenido
+
+document.addEventListener("DOMContentLoaded", function () {
+  let links = document.querySelectorAll(".close");
+
+  links.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        let content = document.querySelector('.content-game');
+        content.classList.replace('animate__backInDown', 'animate__bounceOutUp')
+
+        setTimeout(function() {
+            location.href = "/";
+        }, 600);
+
+        return false;
+    });
+})});

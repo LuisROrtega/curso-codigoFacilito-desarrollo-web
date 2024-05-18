@@ -152,7 +152,9 @@ img {
     width: 100%;
 }
 
-@media (max-width: 600px) {
+/* Mobile First */
+
+@media (max-width: 500px) {
     .content {
         padding: 1em;
     }
